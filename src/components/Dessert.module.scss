@@ -1,0 +1,17 @@
+@use "../styles/main.scss" as *;
+
+.dessert {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.img {
+  border-radius: 0.5rem;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 1 / 1;
+  }
+}
