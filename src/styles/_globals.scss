@@ -1,0 +1,21 @@
+@font-face {
+  src: url("/public/fonts/static/RedHatText-Regular.ttf");
+  font-family: "Red Hat Text";
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("/public/fonts/static/RedHatText-SemiBold.ttf");
+  font-family: "Red Hat Text";
+  font-weight: 600;
+}
+
+@font-face {
+  src: url("/public/fonts/static/RedHatText-Bold.ttf");
+  font-family: "Red Hat Text";
+  font-weight: 700;
+}
+
+body {
+  font-family: $ff-body;
+}
