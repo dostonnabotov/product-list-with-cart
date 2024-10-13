@@ -5,6 +5,11 @@
   gap: 0.5rem;
 }
 
+.imgContainer {
+  display: grid;
+  place-items: center;
+}
+
 .img {
   border-radius: 0.5rem;
   width: 100%;

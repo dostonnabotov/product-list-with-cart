@@ -1,0 +1,78 @@
+@use "../styles/main.scss" as *;
+
+.addCartContainer {
+  --_btn-height: 3.25rem;
+  --_padding-x: 1.5em;
+  border-radius: 100vw;
+
+  height: var(--_btn-height);
+  margin-top: calc((var(--_btn-height) / 2) * -1);
+
+  border: 1px solid $clr-primary;
+  overflow: hidden;
+}
+
+.addCart {
+  border: none;
+  // background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-weight: $fw-medium;
+  color: $clr-secondary-900;
+  display: inline-flex;
+  align-items: center;
+  background-color: $clr-secondary-50;
+  gap: 0.5em;
+  cursor: pointer;
+  padding-inline: var(--_padding-x);
+
+  &:is(:hover, :focus) {
+    color: $clr-primary;
+  }
+
+  &:active {
+    scale: 0.95;
+  }
+}
+
+.addCartFunctions {
+  background-color: $clr-primary;
+  color: $clr-secondary-50;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  padding-inline: var(--_padding-x);
+
+  & > button {
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 1px solid $clr-secondary-50;
+    cursor: pointer;
+
+    &:is(:hover, :focus) {
+      background-color: $clr-secondary-50;
+      color: $clr-primary;
+
+      & path {
+        fill: $clr-primary;
+      }
+    }
+
+    &:active {
+      scale: 0.95;
+    }
+  }
+
+  & > span {
+    min-width: 2ch;
+    text-align: center;
+  }
+}
