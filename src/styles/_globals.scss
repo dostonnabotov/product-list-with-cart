@@ -1,17 +1,17 @@
 @font-face {
-  src: url("/public/fonts/static/RedHatText-Regular.ttf");
+  src: url("/fonts/static/RedHatText-Regular.ttf");
   font-family: "Red Hat Text";
   font-weight: 400;
 }
 
 @font-face {
-  src: url("/public/fonts/static/RedHatText-SemiBold.ttf");
+  src: url("/fonts/static/RedHatText-SemiBold.ttf");
   font-family: "Red Hat Text";
   font-weight: 600;
 }
 
 @font-face {
-  src: url("/public/fonts/static/RedHatText-Bold.ttf");
+  src: url("/fonts/static/RedHatText-Bold.ttf");
   font-family: "Red Hat Text";
   font-weight: 700;
 }
@@ -20,4 +20,5 @@ body {
   font-family: $ff-body;
   font-size: $fs-400;
   background-color: $clr-secondary-100;
+  color: $clr-secondary-900;
 }

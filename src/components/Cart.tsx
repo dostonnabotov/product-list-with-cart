@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { CartItemProps } from "../props";
 import CartItem from "./CartItem";
+import Button from "./Button";
+import styles from "./Cart.module.scss";
+import Icons from "./Icons";
 
 const sampleData: CartItemProps[] = [
   {
@@ -24,24 +27,26 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState<CartItemProps[]>(sampleData);
 
   return (
-    <>
-      <h2>Your Cart (0)</h2>
-      <div>
-        <p>Order Total</p>
-        <p>$46.50</p>
-      </div>
-      <ul>
+    <aside className={styles.cartContainer}>
+      <h2 className={styles.cartTitle}>Your Cart (0)</h2>
+
+      <ul className={styles.cartItems} role="list">
         {cartItems.map((item) => (
           <CartItem key={item.name} {...item} />
         ))}
       </ul>
-      <div>
+      <div className={styles.orderTotal}>
+        <p>Order Total</p>
+        <p className={styles.priceTotal}>$46.50</p>
+      </div>
+      <div className={styles.highlight}>
+        {Icons.CarbonNeutral}
         <p>
           This is a <strong>carbon-neutral</strong> delivery
         </p>
       </div>
-      <button>Confirm Order</button>
-    </>
+      <Button>Confirm Order</Button>
+    </aside>
   );
 };
 

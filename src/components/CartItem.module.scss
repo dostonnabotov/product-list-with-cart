@@ -1,0 +1,45 @@
+@use "../styles/main.scss" as *;
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-block: 0.75rem;
+  border-bottom: 1px solid $clr-secondary-300;
+}
+
+.itemDetails {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.itemCount {
+  font-weight: $fw-bold;
+  color: $clr-primary;
+}
+
+.itemTotal {
+  font-weight: $fw-medium;
+}
+
+.removeBtn {
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 1px solid $clr-secondary-300;
+  cursor: pointer;
+
+  &:is(:hover, :focus) {
+    border-color: $clr-secondary-500;
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+}

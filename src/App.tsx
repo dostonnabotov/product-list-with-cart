@@ -10,9 +10,7 @@ const App = () => {
         <h1 className={styles.title}>Desserts</h1>
         <DessertsList />
       </section>
-      <aside className={styles.cartContainer}>
-        <Cart />
-      </aside>
+      <Cart />
     </main>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { DessertProps } from "../props";
-import styles from "./Dessert.module.scss";
 import AddToCartBtn from "./AddToCartBtn";
+import styles from "./Dessert.module.scss";
 
 const Dessert: React.FC<DessertProps> = ({ image, name, category, price }) => {
   return (
@@ -10,8 +10,8 @@ const Dessert: React.FC<DessertProps> = ({ image, name, category, price }) => {
         <img className={styles.img} src={image} alt={name} />
         <AddToCartBtn />
       </div>
-      <p className={styles.category}>{category}</p>
-      <h3 className={styles.name}>{name}</h3>
+      <p>{category}</p>
+      <h3>{name}</h3>
       <p className={styles.price}>${price.toFixed(2)}</p>
     </li>
   );
